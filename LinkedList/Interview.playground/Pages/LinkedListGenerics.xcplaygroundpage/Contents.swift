@@ -1,19 +1,28 @@
 //: [Previous](@previous)
 
+// Source: https://www.raywenderlich.com/947-swift-algorithm-club-swift-linked-list-data-structure
 import Foundation
 
+//MARK:- GenericNode Definition
 public class GenericNode<T> {
+    
+    //MARK:- Properties
+    
     var value: T
     var next: GenericNode<T>?
     weak var previous: GenericNode<T>?
+    
+    //MARK:- Initialization
     
     init(value: T) {
         self.value = value
     }
 }
 
-
+// MARK:- GenericLinkedList Definition
 public class GenericLinkedList<T> {
+    
+    //MARK:- Properties
     fileprivate var head: GenericNode<T>?
     private var tail: GenericNode<T>?
     
@@ -28,6 +37,8 @@ public class GenericLinkedList<T> {
     public var last: GenericNode<T>? {
         return tail
     }
+    
+    // MARK:- Convenience Functions
     
     public func append(value: T) {
         let newNode = GenericNode(value: value)
@@ -81,6 +92,8 @@ public class GenericLinkedList<T> {
         return node.value
     }
 }
+
+// MARK:- Extensions
 
 extension GenericLinkedList: CustomStringConvertible {
     public var description: String {

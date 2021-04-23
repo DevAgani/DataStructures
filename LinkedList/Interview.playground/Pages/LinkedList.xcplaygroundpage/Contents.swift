@@ -1,5 +1,7 @@
 import Foundation
 
+// Source: https://www.raywenderlich.com/947-swift-algorithm-club-swift-linked-list-data-structure
+
 //MARK:- Node Definition
 public class Node {
     
